@@ -7,7 +7,7 @@ BASE_URL = "https://www.ringodoor.com"
 
 
 class RingoAPI:
-    def __init__(self, ringo_url):
+    def __init__(self, ringo_url: str):
         self.client = httpx.AsyncClient()
         s = re.search(r"https:\/\/www.ringodoor.com\/door\/\?hash=(.*)", ringo_url, re.IGNORECASE)
         if not s:
